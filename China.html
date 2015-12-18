@@ -9,9 +9,9 @@
   <div id="sideBar">
     <fieldset>
       <legend>Parameters</legend>
-        <label>Top value</label><input type="number" name="topValue" id="topValueID" value="100" oninput="maxValueID.max=topValueID.value"> <br/>
-        <label>Pick max value:</label><input type="range" name="maxValue" id="maxValueID" value="50" min="1" max="100" oninput="maxOutputID.value = maxValueID.value"> <br/>
-        <output name="maxValueOutput" id="maxOutputID">50</output>
+        <label>Top value</label><input type="number" name="topValue" id="topValueID" value="200" oninput="maxValueID.max=topValueID.value"> <br/>
+        <label>Pick max value:</label><input type="range" name="maxValue" id="maxValueID" value="100" min="1" max="200" oninput="maxOutputID.value = maxValueID.value" > <br/>
+        <output name="maxValueOutput" id="maxOutputID">100</output>
     </fieldset>
   </div>
   <div id="container"></div>
@@ -331,7 +331,10 @@
       }
     });
     // Initiate the chart
-    var heatMap = $('#container').highcharts('Map', {
+    var heatMap = new Highcharts.Map({
+      chart: {
+        renderTo: 'container'
+      },
 
       title: {
         text: 'Highmaps basic demo'
@@ -380,6 +383,14 @@
         }
       }]
     });
+
+    $('#maxValueID').click(function(){
+      var options = heatMap.options;
+      options.colorAxis.max = 200;//$('#maxValueID').value;
+      heatMap.options = options;
+      heatMap.redraw();
+//      heatMap = new Hightcharts.Map(options);
+    })
   });
 
 </script>
