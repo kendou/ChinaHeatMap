@@ -32,27 +32,25 @@ input, textarea, .spa-x-user-select {
   user-select : text;
 }
 
-$sidebar-width: 20em;
-
 #wrapper {
-  margin-right: $sidebar-width;
+  margin-right: 0;
 }
 #container,
 #sidebar {
   float:left;
 }
 
-#container {
-  width: 75%;
-  margin-top: 10em;
-  min-height: 600px;
-}
-
 #sidebar{
   box-sizing: border-box;
-  padding-left: 1em;
+  margin-left: 5em;
   margin-top:20em;
-  width: $sidebar-width;
+  width: 20em;
+}
+#container {
+  width: 75em;
+  margin-top: 10em;
+  margin-left:5em;
+  min-height: 800px;
 }
 input{
   margin: 1em;
