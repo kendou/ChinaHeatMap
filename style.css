@@ -23,13 +23,12 @@ ol, ul, dl {list-style-position: inside;}
   -webkit-tap-highlight-color : transparent;
   -webkit-touch-callout : none;
 }
-input, textarea, .spa-x-user-select {
-  -webkit-user-select : text;
-  -khtml-user-select : text;
-  -moz-user-select : text;
-  -o-user-select : text;
-  -ms-user-select : text;
-  user-select : text;
+
+html, body {
+  padding:0;
+  margin:0;
+  width: 100%
+  height:100%;
 }
 
 #wrapper {
@@ -42,19 +41,44 @@ input, textarea, .spa-x-user-select {
 
 #sidebar{
   box-sizing: border-box;
-  margin-left: 5em;
-  margin-top:20em;
+  margin-left: 2em;
+  margin-top:5em;
   width: 20em;
+  height: 100%;
 }
 #container {
   width: 75em;
-  margin-top: 10em;
+  margin-top: 2em;
   margin-left:5em;
   min-height: 800px;
 }
 input{
   margin: 1em;
+  width: 15em;
 }
-output{
-  padding-left: 10em;
+
+.dataGroup{
+  height: 30em;
 }
+.dataDiv{
+  position: relative;
+}
+.dataPre {
+/*  margin: 0.5em;
+  border: thin;
+  border-style: groove;
+  border-color: darkgray;
+*/
+  height: 95%;
+
+}
+#dataContent{
+  margin: 0em;
+  height: 100%;
+  font-size: large;
+  overflow-y: scroll;
+}
+#renderCSV{
+  font-size: large;
+}
+

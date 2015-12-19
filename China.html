@@ -1,12 +1,22 @@
+<!DOCTYPE html>
+<html>
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script src="js/jscolor.js"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.2.2/proj4.js"></script>
   <script src="js/jquery-1.10.2.min.js"></script>
   <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
   <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
-  <script src="js/cn-all-sar-taiwan.js"></script>
+  <script src="js/cn-all-sar.js"></script>
+  <script src="js/csv2array.js"></script>
   <link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
+
+<body>
+
 <div id="wrapper">
-  <div id="sideBar">
+  <div id="sidebar">
     <fieldset>
       <legend>Parameters</legend>
       <!--
@@ -15,11 +25,27 @@
         -->
         <label>Title</label><input type="text" value="Heatmap demo" id="titleID"><br/>
         <label>Subtitle</label><input type="text" value="Source map: China with Hongkong, Macau, Taiwan" id="subtitleID"><br/>
-        <label>Top value</label><input type="number" name="topValue" id="topValueID" value="200" oninput="maxValueID.max=topValueID.value"> <br/>
-        <label>Pick max value:</label><input type="range" name="maxValue" id="maxValueID" value="100" min="1" max="200" oninput="maxOutputID.value = maxValueID.value" > <br/>
-        <output name="maxValueOutput" id="maxOutputID">100</output>
+        <label>Top value</label><input type="number" name="topValue" id="topValueID" value="800000" oninput="maxValueID.max=topValueID.value"> <br/>
+        <label>Pick max value:</label><input type="range" name="maxValue" id="maxValueID" value="500000" min="1" max="800000" oninput="maxOutputID.value = maxValueID.value" ><output name="maxValueOutput" id="maxOutputID">500000</output><br/>
+        <label>Min color:</label><input id="mincolor" class="jscolor" value="ffffb2"><br/>
+        <label>Max color:</label><input id="maxcolor" class="jscolor" value="bd0026">
+    </fieldset><br/>
+    <fieldset class="dataGroup">
+      <legend>Paste CSV below</legend>
+          <pre class="dataPre">
+            <div  id="dataContent" contenteditable="true">
+
+              </div>
+            </pre>
     </fieldset>
+    <input type="button" id="renderCSV" value="Render map"/>
   </div>
   <div id="container"></div>
 </div>
+
+<script src="chinaData.js"></script>
 <script src="main.js" > </script>
+
+
+</body>
+</html>
