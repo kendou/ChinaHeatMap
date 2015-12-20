@@ -3,7 +3,7 @@
  */
 $(function () {
   var defaultTitle = "Heatmap demo";
-  var defaultSubtitle = "ONT shipped";
+  var defaultSubtitle = "Device shipped";
   var maps = {
     "china" : Highcharts.maps["countries/cn/custom/cn-all-sar"],
     "asia" : Highcharts.maps["custom/asia"],
@@ -84,6 +84,9 @@ $(function () {
       minColor: '#' + $('#mincolor').val(),
       maxColor: '#' + $('#maxcolor').val()
     },
+    //Change from default #7CB5EC to #F0F0F0, to represent empty data.
+    colors: ['#f0f0f0', '#434348', '#90ed7d', '#f7a35c', '#8085e9',
+      '#f15c80', '#e4d354', '#8085e8', '#8d4653', '#91e8e1'],
 
     series: [{
       data: data,

@@ -88,7 +88,7 @@ var defaultAsiaCSV = `"Afghanistan",
 `;
 var defaultWorldCSV = `"Afghanistan"
 "Albania"
-"Algeria"
+"Algeria", 5000
 "American Samoa"
 "Andorra"
 "Angola"
@@ -258,7 +258,7 @@ var defaultWorldCSV = `"Afghanistan"
 "Solomon Islands"
 "Somalia"
 "Somaliland"
-"South Africa"
+"South Africa",50000
 "South Korea"
 "South Sudan"
 "Spain"
