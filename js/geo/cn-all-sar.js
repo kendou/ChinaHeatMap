@@ -1230,7 +1230,7 @@ Highcharts.maps["countries/cn/custom/cn-all-sar"] = {
       "subregion": "Western",
       "fips": "CH20",
       "postal-code": "NM",
-      "name": "Neimenggu",
+      "name": "Inner Mongol",
       "country": "China",
       "type-en": "Autonomous Region",
       "region": "North China",

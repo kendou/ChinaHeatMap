@@ -119,15 +119,16 @@ function csv2array(data, delimeter) {
   return array;
 }
 
+//convert to HighMaps compatible array
 function csvArr2dataArr(csvArr) {
+  var keyName = "name",
+    valueName = "value";
   var dataArr = [];
-  var key = csvArr[0][0];
-  var value = csvArr[0][1];
-  for(var i = 1; i < csvArr.length; i ++){
+  for(var i = 0; i < csvArr.length; i ++){
     var obj = new Object();
-    obj[key] = csvArr[i][0];
-    obj[value] = csvArr[i][1];
-    dataArr[i-1] = obj;
+    obj[keyName] = csvArr[i][0];
+    obj[valueName] = csvArr[i][1];
+    dataArr[i] = obj;
   }
   return dataArr;
 }
