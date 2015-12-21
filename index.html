@@ -20,6 +20,7 @@
 
 <div id="wrapper">
   <div id="sidebar">
+    <!--
     <fieldset>
       <legend>Map</legend>
       <input type="radio" name="map" id="chinaMapID" value="china"><label>China</label>
@@ -28,10 +29,6 @@
     </fieldset>
     <fieldset id="parameters">
       <legend>Parameters</legend>
-      <!--
-        <label>Type</label><input type="radio" name="type" id="linearID" value="linear" checked="true">Linear
-        <input type="radio" name="type" id="logarithmicID" value="logarithmic">logarithmic<br/>
-        -->
         <label>Title</label><input type="text" value="Heatmap demo" id="titleID"><br/>
         <label>Subtitle</label><input type="text" value="Device Shipped" id="subtitleID"><br/>
         <label>Serial name</label><input type="text" value="Device Data" id="serialNameID"><br/>
@@ -47,9 +44,50 @@
         </textarea>
     </fieldset>
     <input type="button" id="renderCSV" value="Render map"/>
+    -->
+    <div id="tabs-container">
+      <ul class="tabs-menu">
+        <li class="current"><a href="#tab-1">Param</a></li>
+        <li><a href="#tab-2">Data</a></li>
+      </ul>
+      <div class="tab">
+        <div id="tab-1" class="tab-content">
+          <fieldset>
+            <legend>Map</legend>
+            <input type="radio" name="map" id="chinaMapID" value="china"><label>China</label><br/>
+            <input type="radio" name="map" id="asiaMapID" value="asia"><label>Asia</label><br/>
+            <input type="radio" name="map" id="worldMapID" value="world"><label>World</label><br/>
+          </fieldset>
+          <fieldset id="parameters">
+            <legend>Parameters</legend>
+            <!--
+              <label>Type</label><input type="radio" name="type" id="linearID" value="linear" checked="true">Linear
+              <input type="radio" name="type" id="logarithmicID" value="logarithmic">logarithmic<br/>
+              -->
+            <label>Title</label><br/><input type="text" value="Heatmap demo" id="titleID"><br/>
+            <label>Subtitle</label><br/><input type="text" value="Device Shipped" id="subtitleID"><br/>
+            <label>Serial name</label><br/><input type="text" value="Device Data" id="serialNameID"><br/>
+            <label>Top value</label><br/><input type="number" name="topValue" id="topValueID" value="800000" oninput="maxValueID.max=topValueID.value"> <br/>
+            <label>Max value</label><br/><input type="range" name="maxValue" id="maxValueID" value="500000" min="1" max="800000" oninput="maxOutputID.value = maxValueID.value" >
+            <output name="maxValueOutput" id="maxOutputID">500000</output><br/>
+            <label>Min color</label><br/><input id="mincolor" class="jscolor" value="ffffb2"><br/>
+            <label>Max color</label><br/><input id="maxcolor" class="jscolor" value="bd0026">
+          </fieldset><br/>
+        </div>
+        <div id="tab-2" class="tab-content">
+          <fieldset class="dataGroup">
+            <legend>Paste CSV below</legend>
+        <textarea  id="dataContent" wrap="off" spellcheck='false'>
+
+        </textarea>
+          </fieldset>
+          <input type="button" id="renderCSV" value="Render map"/>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="mapContainer" id="container"></div>
-</div>
+
 
 <script src="js/defaultData.js"></script>
 <script src="js/main.js" > </script>

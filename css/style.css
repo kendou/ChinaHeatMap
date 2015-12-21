@@ -16,38 +16,51 @@ html, body {
 }
 
 #parameters{
-  margin-top: 1em;
+//  margin-top: 1em;
 }
 #wrapper {
   margin-right: 0;
+  height:90em;
 }
 #container,
 #sidebar {
-  float:left;
+  display:table-cell;
+  vertical-align: top;
 }
 
 #sidebar{
   box-sizing: border-box;
-  margin-left: 2em;
-  margin-top:2em;
-  width: 25em;
-  height: 100%;
+  margin-left: 1em;
+  margin-top:1em;
+  width: 20em;
+  height: 40em;
 }
 .mapContainer {
-  width: 70em;
-  margin-top: 2em;
-  margin-left:3em;
+  align-content: center;
+  width: 100%;
+  margin-top: 1em;
+  margin-left:1em;
   min-height: 800px;
+}
+label{
+  ;
 }
 input{
   margin: 0.5em;
   font-size: medium;
 }
 input[type=text]{
-  width: 10em;
+  width:8em;
+}
+input[type=range]{
+  width:8em;
+}
+input.jscolor{
+  width:6em;
 }
 #renderCSV{
   font-size: large;
+  margin-top: 0.5em;
 }
 #titleID,#subtitleID,#topValueID{
   width: 12em;
@@ -62,19 +75,11 @@ input[type=text]{
 .dataDiv{
   position: relative;
 }
-.dataPre {
-/*  margin: 0.5em;
-  border: thin;
-  border-style: groove;
-  border-color: darkgray;
-*/
-  height: 95%;
 
-}
 #dataContent{
   position: relative;
   resize: none;
-  margin: 0em;
+  margin: 0;
   width: 100%;
   height: 100%;
   font-size: large;
@@ -84,4 +89,59 @@ input[type=text]{
 #renderCSV{
   font-size: large;
 }
+
+/* For Tab control */
+.tabs-menu {
+  height: 2em;
+  float: left;
+  clear: both;
+}
+
+.tabs-menu li {
+  height: 2em;
+  line-height: 2em;
+  float: left;
+  margin-right: 1em;
+  background-color: #ccc;
+  border-top: 1px solid #d4d4d1;
+  border-right: 1px solid #d4d4d1;
+  border-left: 1px solid #d4d4d1;
+}
+
+.tabs-menu li.current {
+  position: relative;
+  background-color: #fff;
+  border-bottom: 1px solid #fff;
+  z-index: 5;
+}
+
+.tabs-menu li a {
+  padding: 1em;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+
+.tabs-menu .current a {
+  color: #2e7da3;
+}
+
+.tab {
+  border: 1px solid #d4d4d1;
+  background-color: #fff;
+  float: left;
+  margin-bottom: 1em;
+  width: auto;
+}
+
+.tab-content {
+  width: 15em;
+  padding: 1em;
+  display: none;
+}
+
+#tab-1{
+  display: block;
+}
+/*Tab control end here*/
 

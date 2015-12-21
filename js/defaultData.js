@@ -1,36 +1,36 @@
-var defaultChinaCSV = `Anhui, 120000
-Beijing, 50000
-Chongqing, 150000
-Fujian, 1000
-Gansu,500
-Guangdong,30000
-Guangxi,3000
-Guizhou,400
-Hainan,100
-Hebei, 100000
-Heilongjiang,200000
-Henan,450000
-Hubei, 250000
-Hunan,70000
-Jiangsu,100000
-Jiangxi,12000
-Jilin,500
-Liaoning,10000
-Macau, 1000
-"Inner Mongol",30000
-Ningxia, 100
-Qinghai,2000
-Shaanxi, 40000
-Shandong,300000
-Shanghai,50000
-Shanxi,8000
-Sichuan,7000
-Taiwan,100
-Tianjin,5000
-Xinjiang,100
-Xizang, 100
-Yunnan, 1000
-Zhejiang,80000
+var defaultChinaCSV = `Anhui, 60875
+Beijing, 9470
+Chongqing, 3855
+Fujian, 23320
+Gansu,64992
+Guangdong,351472
+Guangxi,191631
+Guizhou,39294
+Hainan
+Hebei, 38447
+Heilongjiang,320562
+Henan,450660
+Hubei, 6501
+Hunan,32397
+Jiangsu,50861
+Jiangxi,39468
+Jilin,61704
+Liaoning,157551
+Macau
+"Inner Mongol",101789
+Ningxia, 13201
+Qinghai,116
+Shaanxi, 48372
+Shandong,389099
+Shanghai
+Shanxi,72267
+Sichuan,7559
+Taiwan
+Tianjin
+Xinjiang,6997
+Xizang
+Yunnan, 10972
+Zhejiang,41476
 `;
 var defaultAsiaCSV = `"Afghanistan",
 "Armenia",
